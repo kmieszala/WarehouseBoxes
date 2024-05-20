@@ -1,0 +1,33 @@
+<div *ngIf="targetControl.invalid && (targetControl.touched || targetControl.dirty)" class="text-danger">
+  <div *ngIf="targetControl.errors?.required">
+    To pole jest wymagane
+  </div>
+  <div *ngIf="targetControl.errors?.max && !targetControl.errors.required">
+    Nieprawidłowa wartość
+  </div>
+  <div *ngIf="targetControl.errors?.min && !targetControl.errors.required">
+    Nieprawidłowa wartość
+  </div>
+  <div *ngIf="targetControl.errors.minlength && !targetControl.errors.required">
+    Wamagana minimalna długość: {{targetControl.errors.minlength.requiredLength}}
+  </div>
+  <div *ngIf="targetControl.errors.maxlength && !targetControl.errors.required">
+    Maksymalna długość: {{targetControl.errors.maxlength.requiredLength}}
+  </div>
+  <!-- pattern for password -->
+  <div *ngIf="targetControl.errors?.pattern && !targetControl.errors.required && targetControl.errors?.pattern.requiredPattern.indexOf('@$!%*#?') == 37">    
+    Wymagana cyfra, mała litera, duża litera i znak specjalny (@$!%*#?&^_-)
+  </div>
+  <div *ngIf="targetControl.errors?.pattern && !targetControl.errors.required && targetControl.errors?.pattern.requiredPattern.indexOf('+?[1-9]') == 3">
+    Wprowadzony numer telefonu jest nieprawidłowy
+  </div>
+  <div *ngIf="targetControl.errors?.pattern && !targetControl.errors.required && targetControl.errors?.pattern.requiredPattern.indexOf('w+)*@') == 13">
+    Wprowadzony email jest nieprawidłowy
+  </div>
+  <div *ngIf="targetControl.errors?.match_error && !targetControl.errors.required">
+    Hasła nie są identyczne
+  </div>
+  <div *ngIf="targetControl.errors?.uniqueLoginError && !targetControl.errors.required">
+    Podany login już istnieje
+  </div>
+</div>

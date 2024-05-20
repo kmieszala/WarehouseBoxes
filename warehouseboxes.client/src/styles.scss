@@ -1,0 +1,179 @@
+
+@for $width from 1 through 300 {
+  .w-#{$width}px {
+    width: $width * 1px !important;
+  }
+}
+
+@for $height from 1 through 40 {
+  .h-#{$height*10}px {
+    height: $height * 10px !important;
+    overflow-y: auto;
+  }
+}
+
+@for $height from 30 through 40 {
+  .mh-#{$height*10}px {
+    max-height: $height * 10px !important;
+    overflow-y: auto;
+  }
+}
+
+.active-column {
+  color: green;
+}
+
+th, td {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100vw;
+    overflow: hidden;
+}
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.scrolX {
+  overflow-x: auto;
+  display: block;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+input.form-control {
+
+  &.ng-invalid.ng-touched {
+    border: 2px solid red;
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem #cd131640;
+      border: 2px solid red;
+    }
+  }
+}
+ng-select {
+
+  &.ng-invalid.ng-touched {
+    border: 2px solid red;
+    border-radius: 0.25rem;
+    &:focus {
+      box-shadow: 0 0 0 0.25rem #cd131640;
+      border: 2px solid red;
+    }
+  }
+}
+textarea {
+
+  &.ng-invalid.ng-touched {
+    border: 2px solid red;
+    border-radius: 0.25rem;
+    &:focus {
+      box-shadow: 0 0 0 0.25rem #cd131640;
+      border: 2px solid red;
+    }
+  }
+}
+
+.card {
+  box-shadow: 1px 1px 3px #888;
+  background-color: #fbfbfb;
+}
+
+.icon-hover :hover {
+  color: rgb(161, 23, 23);
+  cursor: pointer;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1)!important;
+  background-color: #dddddd;
+}
+
+footer {
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 -0.25rem 0.75rem rgba(0, 0, 0, .05);
+  border-top: 1px solid #dee2e6!important
+}
+
+.btn-light {
+  border: 1px solid #dee2e6!important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.link-active>a {
+  font-weight: bold;
+  color: #ea868f !important;
+}
+.link-active {
+  font-weight: bold;
+  color: #ea868f !important;
+}
+
+// a.nav-link:hover {
+//   font-weight: bold;
+// }
+a.dropdown-item:hover {
+  font-weight: bold;
+}
+
+// .navbar-nav .nav-link .link-active {
+//   color: #ea868f !important;
+// }
+
+.gblobal-menu {
+  background-color: #f8f9fa;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+}
+
+.no-hover{
+  background-color: white !important;
+}
+
+.no-hover :hover{
+  background-color: white !important;
+}
+
+// .tp-radio-group {
+//   display: inline-flex;
+//   flex-direction: column;
+// }
+// .tp-radio-button {
+//   margin: 5px;
+// }
+// .tp-selected-value {
+//   margin: 15px 0;
+// }
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";

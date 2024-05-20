@@ -1,0 +1,120 @@
+<div class="modal-header pb-0" *ngIf="!loading">    
+    <h4  class="modal-title pull-left">
+      Dodaj boks magazynowy
+    </h4>
+  </div>
+  <form class="modal-body" [formGroup]="form" (ngSubmit)="saveBox()">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Czy korytarz
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="checkbox" id="formCorridor" class="form-control" formControlName="   " />
+            </div>
+            <form-error [targetControl]="formCorridor"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Nazwa boksu
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="text" id="formName" class="form-control" formControlName="formName" />
+            </div>
+            <form-error [targetControl]="formName"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Pozycja x
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="number" id="formX" class="form-control" formControlName="formX" />
+            </div>
+            <form-error [targetControl]="formX"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Pozycja y
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="number" id="formY" class="form-control" formControlName="formY" />
+            </div>
+            <form-error [targetControl]="formY"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Długość
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="number" id="formHeight" class="form-control" formControlName="formHeight" />
+            </div>
+            <form-error [targetControl]="formHeight"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Szerokość
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="number" id="formWidth" class="form-control" formControlName="formWidth" />
+            </div>
+            <form-error [targetControl]="formWidth"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget widget-simple">
+          <div class="widget-header">
+            Dodatkowy opis
+          </div>
+          <div class="widget-body">
+            <div class="input-group has-validation">
+              <input type="text" id="formDescription" class="form-control" formControlName="formDescription" />
+            </div>
+            <form-error [targetControl]="formDescription"></form-error>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="row mt-3">
+      <div class="col-md-12 text-center">
+        <button class="btn btn-light btn-sm me-2" type="button"><i class="fas fa-undo"></i> Anuluj</button>
+        <button class="btn btn-primary btn-sm" type="button" ><i class="fas"></i> Test</button>
+        <button class="btn btn-primary btn-sm" type="submit" ><i class="fas fa-save"></i> Zapisz</button>
+      </div>
+    </div>
+  </form>
+  
