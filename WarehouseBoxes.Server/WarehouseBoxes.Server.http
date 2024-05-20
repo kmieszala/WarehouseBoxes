@@ -1,0 +1,6 @@
+@WarehouseBoxes.Server_HostAddress = http://localhost:5211
+
+GET {{WarehouseBoxes.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
