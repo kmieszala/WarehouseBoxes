@@ -15,8 +15,8 @@
     Maksymalna długość: {{targetControl.errors.maxlength.requiredLength}}
   </div>
   <!-- pattern for password -->
-  <div *ngIf="targetControl.errors?.pattern && !targetControl.errors.required && targetControl.errors?.pattern.requiredPattern.indexOf('@$!%*#?') == 37">    
-    Wymagana cyfra, mała litera, duża litera i znak specjalny (@$!%*#?&^_-)
+  <div *ngIf="targetControl.errors?.pattern && !targetControl.errors.required && targetControl.errors?.pattern.requiredPattern.indexOf('$!%*#?') == 37">    
+    Wymagana cyfra, mała litera, duża litera i znak specjalny ($!%*#?&^_-)
   </div>
   <div *ngIf="targetControl.errors?.pattern && !targetControl.errors.required && targetControl.errors?.pattern.requiredPattern.indexOf('+?[1-9]') == 3">
     Wprowadzony numer telefonu jest nieprawidłowy

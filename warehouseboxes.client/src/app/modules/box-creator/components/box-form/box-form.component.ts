@@ -24,7 +24,7 @@ export class BoxFormComponent implements OnInit  {
   ngOnInit(): void {    
     this.form = this._formBuilder.group({
       formName: new FormControl(null, [Validators.required, Validators.maxLength(100)]),
-      formCorridor: new FormControl(false),
+      formCorridor: new FormControl(true),
       formX: new FormControl(null, [Validators.required]),
       formY: new FormControl(null, [Validators.required]),
       formHeight: new FormControl(null, [Validators.required]),

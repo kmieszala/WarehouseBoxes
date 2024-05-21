@@ -27,7 +27,6 @@
             "styles": [
               "node_modules/animate.css/animate.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "node_modules/@ng-select/ng-select/themes/default.theme.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/ngx-toastr/toastr.css",
@@ -66,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "warehouseboxes.client:build:production"
+              "buildTarget": "warehouseboxes.client:build:production"
             },
             "development": {
-              "browserTarget": "warehouseboxes.client:build:development"
+              "buildTarget": "warehouseboxes.client:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "warehouseboxes.client:build"
+            "buildTarget": "warehouseboxes.client:build"
           }
         },
         "test": {
@@ -98,7 +97,6 @@
             "styles": [
               "node_modules/animate.css/animate.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "node_modules/@ng-select/ng-select/themes/default.theme.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/ngx-toastr/toastr.css",
